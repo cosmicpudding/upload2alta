@@ -11,8 +11,11 @@ except:
 
 # Make a temporary directory
 path = '/data/moss/alta/%i' % tid
-os.mkdir(path)
-
+try:
+	os.mkdir(path)
+except:
+	print("Path already made!")
+	
 # Loop through and copy all beams
 for i in range(0,40):
 
