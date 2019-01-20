@@ -14,7 +14,7 @@ path = '/data5/moss/alta/%i' % tid
 try:
 	os.mkdir(path)
 except:
-	print("Path already made!")
+	print("Happili-05 path already made!")
 
 # Loop through and copy all beams
 for i in range(0,40):
@@ -34,12 +34,15 @@ for i in range(0,40):
 		print(cmd)
 		#os.system()
 
-	# Send to ALTA
-	# Make a folder on alta
-	alta_path = '/altaZone/home/apertif_main/early_results/%i' % tid
+# Send to ALTA
+# Make a folder on alta
+alta_path = '/altaZone/home/apertif_main/early_results/%i' % tid
+try:
 	os.system('imkdir %s' % alta_path)
+except: 
+	print("ALTA path already made!")
 
-	# Copy
-	cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (path,alta_path)
-	print(cmd)
+# Copy
+cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (path,alta_path)
+print(cmd)
 #	os.system()
