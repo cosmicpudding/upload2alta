@@ -37,12 +37,13 @@ for i in range(0,40):
 # Send to ALTA
 # Make a folder on alta
 alta_path = '/altaZone/home/apertif_main/early_results/%i' % tid
-try:
-	os.system('imkdir %s' % alta_path)
-except: 
-	print("ALTA path already made!")
+# try:
+# 	os.system('imkdir %s' % alta_path)
+# except: 
+# 	print("ALTA path already made!")
 
 # Copy
-cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (path,alta_path)
+os.chdir('/data5/moss/alta/')
+cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (tid,alta_path)
 print(cmd)
 os.system(cmd)
