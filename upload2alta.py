@@ -26,6 +26,6 @@ for i in range(0,40):
 	# Copy
 	for x in files:
 		stem = x.split('.UVFITS')[0]
-		cmd = 'cp %s %s/%s_B%.3d.UVFITS' % (x,stem,i)
+		cmd = 'cp %s %s/%s_B%.3d.UVFITS' % (x,path,stem,i)
 		print(cmd)
 		#os.system()
