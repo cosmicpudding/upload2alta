@@ -20,8 +20,8 @@ except:
 for i in range(0,40):
 
 	# Copy and rename
-	node = i // 40 + 1
-	print('Checking happili-%.2d' % node)
+	node = i // 10 + 1
+	#print('Checking happili-%.2d' % node)
 	if node > 1:
 		files = glob.glob('/data%s/apertif/%i/%.2d/crosscal/*UVFITS' % (node,tid,i))
 	else:
