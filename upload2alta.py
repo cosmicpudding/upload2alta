@@ -32,7 +32,7 @@ for i in range(0,40):
 		stem = x.split('.UVFITS')[0].split('/')[-1]
 		cmd = 'cp %s %s/%s_B%.3d.UVFITS' % (x,path,stem,i)
 		print(cmd)
-		#os.system()
+		os.system(cmd)
 
 # Send to ALTA
 # Make a folder on alta
@@ -45,4 +45,4 @@ except:
 # Copy
 cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (path,alta_path)
 print(cmd)
-#	os.system()
+os.system(cmd)
