@@ -5,9 +5,9 @@ import glob
 
 # Get task ID
 try: 
-	tid = sys.argv[1]
+	tid = int(sys.argv[1])
 except:
-	tid = '181211022'
+	tid = 181211022
 
 # Make a temporary directory
 path = '/data/moss/alta/%i' % tid
