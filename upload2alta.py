@@ -10,7 +10,7 @@ except:
 	tid = 181211022
 
 # Make a temporary directory
-path = '/data/moss/alta/%i' % tid
+path = '/data5/moss/alta/%i' % tid
 try:
 	os.mkdir(path)
 except:
@@ -33,3 +33,13 @@ for i in range(0,40):
 		cmd = 'cp %s %s/%s_B%.3d.UVFITS' % (x,path,stem,i)
 		print(cmd)
 		#os.system()
+
+	# Send to ALTA
+	# Make a folder on alta
+	alta_path = '/altaZone/home/apertif_main/early_results/%i' % tid
+	os.system('imkdir %s' % alta_path)
+
+	# Copy
+	cmd = 'python /home/moss/altadata/putdata_alta.py %s %s' % (path,alta_path)
+	print(cmd)
+#	os.system()
