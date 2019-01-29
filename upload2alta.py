@@ -40,7 +40,7 @@ for i in range(0,40):
 
 # Send to ALTA
 # Make a folder on alta
-alta_path = '/altaZone/home/apertif_main/early_results/%i' % tid
+alta_path = '/altaZone/home/apertif_main/early_results'
 # try:
 # 	os.system('imkdir %s' % alta_path)
 # except: 
