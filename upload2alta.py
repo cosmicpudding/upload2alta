@@ -9,6 +9,16 @@ try:
 except:
 	tid = 181211022
 
+try: 
+	sbeam = int(sys.argv[2])
+except:
+	sbeam = 0 
+
+try: 
+	ebeam = int(sys.argv[3])
+except:
+	ebeam = 40
+
 # Make a temporary directory
 path = '/data5/moss/alta/%i' % tid
 try:
@@ -17,7 +27,7 @@ except:
 	print("Happili-05 path already made!")
 
 # Loop through and copy all beams
-for i in range(0,40):
+for i in range(sbeam,ebeam):
 
 	# Copy and rename
 	node = i // 10 + 1
